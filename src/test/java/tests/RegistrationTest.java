@@ -7,6 +7,7 @@ import pages.RegistrationPage;
 
 import static pages.RegistrationPage.*;
 
+@Tag("Registration")
 public class RegistrationTest extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
 

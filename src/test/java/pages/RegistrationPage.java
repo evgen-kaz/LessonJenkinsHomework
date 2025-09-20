@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import org.junit.jupiter.api.Tag;
 import pages.components.CalendarComponent;
 import pages.components.RegistrationResultComponent;
 
