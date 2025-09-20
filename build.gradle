@@ -26,7 +26,7 @@ dependencies {
             'io.qameta.allure:allure-selenide:2.29.1',
             "com.codeborne:selenide:7.9.4",
             "org.junit.jupiter:junit-jupiter:5.10.0",
-            'org.slf4j:slf4j-simple:2.0.7' //библиотека отвечающая за системное логирование
+            'org.slf4j:slf4j-simple:2.0.7'
     )
 }
 
@@ -34,9 +34,9 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-test { //запускает все тесты проекта
+test { 
     useJUnitPlatform()
-    testLogging { //чуть изменили и теперь будет побольше всего выводиться в консоль
+    testLogging { 
         lifecycle {
             events "started", "skipped", "failed", "standard_error", "standard_out"
             exceptionFormat "short"
@@ -44,14 +44,14 @@ test { //запускает все тесты проекта
     }
 }
 
-task simple_test(type: Test) { //тип таски
+task simple_test(type: Test) {
     useJUnitPlatform {
-        includeTags("simple") //запускаем тесты с тегом simple
+        includeTags("simple") 
     }
 }
 
-task demoqa_test(type: Test) { //просто название
+task demoqa_test(type: Test) { 
     useJUnitPlatform {
-        includeTags("demoqa") //название самого тега. должно быть идентично
+        includeTags("demoqa")
     }
 }
